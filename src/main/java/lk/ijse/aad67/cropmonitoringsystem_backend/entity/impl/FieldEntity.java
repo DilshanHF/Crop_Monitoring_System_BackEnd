@@ -1,9 +1,6 @@
 package lk.ijse.aad67.cropmonitoringsystem_backend.entity.impl;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lk.ijse.aad67.cropmonitoringsystem_backend.entity.SuperEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,5 +25,7 @@ public class FieldEntity implements SuperEntity {
     private String field_Image1;
     @Column(columnDefinition = "LONGTEXT")
     private String field_Image2;
+    @ManyToOne
+    private FieldEntity fieldEntity;
 
 }
