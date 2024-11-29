@@ -52,8 +52,7 @@ public class StaffEntity implements SuperEntity {
     @OneToMany(mappedBy = "staffEquipment")
     private List<EquipmentEntity> staffEquipment;
 
-    @Column(columnDefinition = "LONGTEXT")
-    private String image;
+
 
     @ManyToOne
     @JoinColumn(name = "logCode",nullable = false)

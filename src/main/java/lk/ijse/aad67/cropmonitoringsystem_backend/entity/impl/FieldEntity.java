@@ -19,8 +19,8 @@ public class FieldEntity implements SuperEntity {
     @Id
     private String f_Code;
     private String f_Name;
-    private String f_Location;
-    private int f_Size;
+    private int  f_Location;
+    private Double f_Size;
     @OneToMany(mappedBy = "fieldEntity")
     private List<CropEntity> c_Code;
     @Column(columnDefinition = "LONGTEXT")
