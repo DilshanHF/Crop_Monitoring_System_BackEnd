@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "vehicle")
+@Table(name = "equipmentTable")
 public class EquipmentEntity implements SuperEntity {
     @Id
     private String eq_Id;
@@ -19,6 +19,12 @@ public class EquipmentEntity implements SuperEntity {
     @Enumerated(EnumType.STRING)
     private VType eq_Type;
     private String status;
+    @ManyToOne
+    @JoinColumn(name = "staffId",nullable = false)
+    private StaffEntity staffEquipment;
+    @ManyToOne
+    @JoinColumn(name = "FieldId",nullable = false)
+    private FieldEntity fieldEquipment;
 
 
 }

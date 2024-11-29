@@ -21,8 +21,12 @@ public class LogsEntity implements SuperEntity {
     private  String log_details;
     @Column(columnDefinition = "LONGTEXT")
     private String ObservedImage;
-    @OneToMany(mappedBy = "fieldEntity")
-    private List<FieldEntity> field;
-    @OneToMany(mappedBy = "")
-    private List<CropEntity> crop;
+    @OneToMany(mappedBy = "log")
+    private List<StaffEntity> staff;
+
+    @OneToMany(mappedBy = "logField")
+    private List<FieldEntity> logField;
+
+    @OneToMany(mappedBy = "log")
+    private List<CropEntity> cropEntitiesCrop;
 }
