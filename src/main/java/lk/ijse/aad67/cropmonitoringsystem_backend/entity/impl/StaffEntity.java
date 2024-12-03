@@ -26,7 +26,7 @@ public class StaffEntity implements SuperEntity {
     @Embedded
     private SName name;
     @Enumerated(EnumType.STRING)
-    private Designation designation;
+    private Designation staffDesignation;
     @Enumerated(EnumType.STRING)
     private Gender gender;
     private Date joinedDate;
@@ -46,7 +46,7 @@ public class StaffEntity implements SuperEntity {
     )
     private List<FieldEntity> fieldAssigned = new ArrayList<>();
 
-    @OneToMany(mappedBy = "staffEntity")
+    @OneToMany(mappedBy = "staffId")
     private List<VehicleEntity> vehicleEntity;
 
     @OneToMany(mappedBy = "staffEquipment")

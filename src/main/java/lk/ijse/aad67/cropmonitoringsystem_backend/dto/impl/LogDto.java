@@ -13,8 +13,8 @@ import java.util.List;
 public class LogDto implements Status {
     private String logCode;
     private String logDate;
-    private String LogDetails;
-    private String ObservedImage;
+    private String logDetails;
+    private String observedImage;
     private List<FieldDto> fieldCode;
     private List<CropDto> cropCode;
     private List<StaffDto> staffId;

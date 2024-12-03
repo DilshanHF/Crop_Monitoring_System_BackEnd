@@ -17,12 +17,12 @@ import java.util.List;
 @Table(name = "field")
 public class FieldEntity implements SuperEntity {
     @Id
-    private String f_Code;
-    private String f_Name;
-    private int  f_Location;
-    private Double f_Size;
+    private String fieldCode;
+    private String fieldName;
+    private int  fieldLocation;
+    private Double fieldSize;
     @OneToMany(mappedBy = "fieldEntity")
-    private List<CropEntity> c_Code;
+    private List<CropEntity> cropEntityList;
     @Column(columnDefinition = "LONGTEXT")
     private String field_Image1;
     @Column(columnDefinition = "LONGTEXT")

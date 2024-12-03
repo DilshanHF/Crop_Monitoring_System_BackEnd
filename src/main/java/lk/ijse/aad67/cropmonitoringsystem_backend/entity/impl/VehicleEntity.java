@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 @Table(name = "vehicle")
 public class VehicleEntity implements SuperEntity {
     @Id
-    private String vehicle_Code;
-    private String vehicle_Number;
-    private String vehicle_Category;
-    private String fuel_Type;
-    private String status;
+    private String vehicleCode;
+    private String plateNumber;
+    private String vehicleCategory;
+    private String fuelType;
+    private String vehicleStatus;
     @ManyToOne
     @JoinColumn(name = "staffId",nullable = false)
-    private StaffEntity staffEntity;
+    private StaffEntity staffId;
     private String remarks;
 
 

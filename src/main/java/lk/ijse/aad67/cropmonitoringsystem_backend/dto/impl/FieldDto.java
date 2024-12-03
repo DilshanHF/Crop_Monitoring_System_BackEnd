@@ -22,9 +22,9 @@ public class FieldDto implements Status {
     private String fieldName;
     private int fieldLocation;
     private Double fieldSize;
-    private List<String> crops;
+    private List<String> cropEntityList;
     private List<String> staffField;
-    private String image1;
-    private String image2;
-    private String logCode;
+    private String field_Image1;
+    private String field_Image2;
+    private String logField;
 }

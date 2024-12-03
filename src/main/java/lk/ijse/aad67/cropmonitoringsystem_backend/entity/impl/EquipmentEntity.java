@@ -14,17 +14,19 @@ import lombok.NoArgsConstructor;
 @Table(name = "equipmentTable")
 public class EquipmentEntity implements SuperEntity {
     @Id
-    private String eq_Id;
-    private String eq_Name;
+    private String equipment_Id;
+    private String equipmentName;
     @Enumerated(EnumType.STRING)
-    private VType eq_Type;
-    private String status;
+    private VType equipmentType;
+    private String equipmentStatus;
     @ManyToOne
     @JoinColumn(name = "staffId",nullable = false)
     private StaffEntity staffEquipment;
+    ;
     @ManyToOne
-    @JoinColumn(name = "FieldId",nullable = false)
+    @JoinColumn(name = "fieldCode",nullable = false)
     private FieldEntity fieldEquipment;
+
 
 
 }

@@ -16,11 +16,11 @@ import java.util.List;
 @Table(name="logs")
 public class LogsEntity implements SuperEntity {
     @Id
-    private String log_code;
-    private Date log_date;
-    private  String log_details;
+    private String logCode;
+    private Date logDate;
+    private  String logDetails;
     @Column(columnDefinition = "LONGTEXT")
-    private String ObservedImage;
+    private String observedImage;
     @OneToMany(mappedBy = "log")
     private List<StaffEntity> staff;
 

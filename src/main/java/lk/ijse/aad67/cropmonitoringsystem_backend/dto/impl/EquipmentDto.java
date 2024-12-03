@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class EquipmentDto implements Status {
-    private String eq_tId;
-    private String eq_Name;
-    private VType eq_Type;
-    private String e_Status;
+    private String equipment_Id;
+    private String equipmentName;
+    private VType equipmentType;
+    private String equipmentStatus;
     private String staffId;
     private String fieldCode;
 }

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class User implements Status {
+public class UserDto implements Status {
     private String email;
     private String password;
     private Role role;
